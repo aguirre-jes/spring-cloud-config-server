@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: demo-config-server
+  profiles:
+    active: local,development,production
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://bitbucket.indra.es/scm/gt_indra_prot/proof-concept
+          username: jeaguirre
+          password: PRu7v8e7CK
+          default-label: master
+          search-paths: configData/
+server:
+  port: 9092
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
